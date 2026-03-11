@@ -1,7 +1,6 @@
-# Flutter AnimatedContainer Widget Demo
+# Flutter Animated Container Widget Demo
 
-**Widget:** `AnimatedContainer`  
-**Student:** Sonia Mutesi Uwase  
+**Widget:** `Animated Container`    
 **Course Widget Presentation**
 
 ---
@@ -18,23 +17,19 @@
 
 ## How to Run
 
-1. Make sure Flutter is installed — [flutter.dev/get-started](https://flutter.dev/get-started)
-2. Clone this repo:
+1. Clone this repo:https://github.com/inyangelarissa/widget_presentation
    ```bash
    git clone 
    cd animated_container_demo
    ```
-3. Get dependencies:
+2. Get dependencies:
    ```bash
    flutter pub get
    ```
-4. Run the app:
+3. Run the app:
    ```bash
    flutter run
    ```
-
-> Tested on Flutter 3.x. Works on Android, iOS, and Chrome (web).
-
 ---
 
 ## The Three Properties Demonstrated
@@ -84,15 +79,6 @@ AnimatedContainer(
   ...
 )
 ```
-
----
-
-## Screenshot
-
-*(Replace this line with a screenshot after running `flutter run`)*
-
-![App Screenshot](assets/screenshot.png)
-
 ---
 
 ## Project Structure
@@ -103,16 +89,6 @@ lib/
 pubspec.yaml    — dependencies
 README.md       — this file
 ```
-
-## Commit History
-
-- `init: scaffold Flutter project`
-- `feat: add track data model with color, size, and radius per track`  
-- `feat: build AnimatedContainer album art with decoration and size`
-- `feat: add duration selector — 4 speed options`
-- `feat: add track switcher buttons and play/pause toggle`
-- `feat: add sound bar animation and code snippet panel`
-- `docs: complete README with run steps and attribute notes`
 
 ---
 
