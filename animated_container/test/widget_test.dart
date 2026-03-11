@@ -8,23 +8,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:animated_container/main.dart';
+import 'package:animated_container_demo/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('renders and moves to next track', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const AnimatedContainerDemoApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify initial UI is shown.
+    expect(find.text('Music Player'), findsOneWidget);
+    expect(find.text('Midnight Drive'), findsOneWidget);
+    expect(find.text('Summer Bloom'), findsNothing);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Move to next track and allow the transition to settle.
+    await tester.tap(find.byIcon(Icons.skip_next_rounded));
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify track changed.
+    expect(find.text('Midnight Drive'), findsNothing);
+    expect(find.text('Summer Bloom'), findsOneWidget);
   });
 }

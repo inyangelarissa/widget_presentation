@@ -84,7 +84,7 @@ class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
   // ── PROPERTY 1: duration ──────────────────────────────────────────────────
   // How long the transition animation takes.
   // Short = snappy, Long = slow and dreamy.
-  Duration _duration = const Duration(milliseconds: 600);
+  final Duration _duration = const Duration(milliseconds: 600);
 
   // ── PROPERTY 2: decoration (color + borderRadius) ─────────────────────────
   // Sets the visual appearance of the container.
@@ -312,7 +312,7 @@ class _SoundBarsState extends State<_SoundBars>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _ctrl,
-      builder: (_, _) => Row(
+      builder: (context, child) => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: _anims.map((anim) {
